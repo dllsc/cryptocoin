@@ -1,0 +1,12 @@
+.button{
+
+  &-delete{
+   background: red;
+  }
+  &-secondary{
+    background: darkviolet;
+  }
+  &-primary{
+    background: orange;
+  }
+}
