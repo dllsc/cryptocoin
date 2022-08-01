@@ -2,7 +2,11 @@
   display: flex;
   justify-content: space-between;
   background: rgb(0, 212, 255);
-  background: linear-gradient(90deg, rgba(0, 212, 255, 1) 5%, rgba(9, 9, 121, 1) 95%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 212, 255, 1) 5%,
+    rgba(9, 9, 121, 1) 95%
+  );
 
   &-card {
     height: 45px;
@@ -27,7 +31,6 @@
         margin: 0;
       }
     }
-
   }
 
   &-card:hover {
@@ -39,4 +42,3 @@
     display: flex;
   }
 }
-

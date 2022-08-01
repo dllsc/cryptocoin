@@ -1,3 +1,3 @@
-export const CoinInfoPage = ()=>{
-    return <>One Coin Info</>
-}
+export const CoinInfoPage = () => {
+  return <>One Coin Info</>;
+};
