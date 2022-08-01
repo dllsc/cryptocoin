@@ -44,7 +44,7 @@ const popular = [
 ];
 
 export function Header() {
-  const _formatCurrency = function (amount: string) {
+  const formatCurrency = function (amount: string) {
     return (
       "$" +
       parseFloat(amount)
@@ -66,7 +66,7 @@ export function Header() {
               <h4>{coin.name}</h4>
               <span>{coin.symbol}</span>
             </div>
-            <h2>{_formatCurrency(coin.priceUsd)}</h2>
+            <h2>{formatCurrency(coin.priceUsd)}</h2>
           </Link>
         ))}
       </div>
