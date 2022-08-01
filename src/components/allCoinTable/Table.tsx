@@ -16,7 +16,7 @@ export const Table = () => {
           <th>Action</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className={'table_rows'}>
         <RowTable
           name={"BitCoin"}
           volume={43}
