@@ -1,5 +1,5 @@
-import { RowTable } from "../rowTable";
-import "./allCoinTable.scss";
+import { RowTable } from "../RowTable";
+import "./AllCoinTable.scss";
 
 export const Table = () => {
   return (

@@ -1,4 +1,4 @@
-import "./button.scss";
+import "./Button.scss";
 import { HTMLProps, ReactNode } from "react";
 
 interface ButtonProps extends HTMLProps<HTMLButtonElement> {

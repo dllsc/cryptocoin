@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { AllCoinsPage } from "./views/allCoinsPage";
-import { CoinInfoPage } from "./views/coinInfoPage";
+import { AllCoinsPage } from "./views/AllCoinsPage";
+import { CoinInfoPage } from "./views/CoinInfoPage";
 import { Header } from "./components/header/Header";
 
 function App() {
