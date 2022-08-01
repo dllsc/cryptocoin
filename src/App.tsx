@@ -1,12 +1,9 @@
 import React from 'react';
-import {
-    BrowserRouter,
-    Route,
-    Routes,
-} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { AllCoinsPage } from './views/allCoinsPage';
 import { CoinInfoPage } from './views/coinInfoPage';
+import { Header } from './components/header/Header';
 
 function App() {
     const routesComponent = (
@@ -14,7 +11,10 @@ function App() {
             <Route path={'/'} element={<AllCoinsPage/>}  />
             <Route path={'one'} element={<CoinInfoPage/>}/>
         </Routes>)
-    return <BrowserRouter>{routesComponent}</BrowserRouter>;
+    return <BrowserRouter>
+        <Header/>
+        {routesComponent}
+    </BrowserRouter>;
 }
 
 export default App;
