@@ -1,13 +1,13 @@
-import { Button } from "./button/Button";
+import { Button } from "../Button/Button";
 
 interface RowTableProps {
-  rank: number;
+  rank: string;
   name: string;
-  price: number;
-  marketCap: number;
-  vwap: number;
-  supply: number;
-  volume: number;
+  price: string;
+  marketCap: string;
+  vwap: string;
+  supply: string;
+  volume: string;
   buy: () => void;
 }
 

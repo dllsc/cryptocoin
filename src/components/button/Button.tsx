@@ -5,6 +5,7 @@ interface ButtonProps extends HTMLProps<HTMLButtonElement> {
   type?: "delete" | "secondary" | "primary";
   children: ReactNode;
 }
+
 const buttonTypeClassName = {
   delete: "button-delete",
   secondary: "button-secondary",
@@ -14,11 +15,12 @@ export const Button = ({
   onClick,
   children,
   type = "primary",
+  ...props
 }: ButtonProps) => {
   const className = ["button"];
   className.push(buttonTypeClassName[type]);
   return (
-    <button className={className.join(" ")} onClick={onClick}>
+    <button className={className.join(" ")} onClick={onClick} {...props}>
       {children}
     </button>
   );
