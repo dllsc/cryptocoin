@@ -7,7 +7,6 @@ interface tableData {
 }
 
 export const Table = ({ assets }: tableData) => {
-  console.log(assets);
   return (
     <table>
       <thead>
@@ -23,17 +22,8 @@ export const Table = ({ assets }: tableData) => {
         </tr>
       </thead>
       <tbody className={"table_rows"}>
-        {assets.map((value) => (
-          <RowTable
-            rank={value.rank}
-            name={value.name}
-            price={value.priceUsd}
-            marketCap={value.marketCapUsd}
-            vwap={value.vwap24Hr}
-            supply={value.supply}
-            volume={value.volumeUsd24Hr}
-            buy={() => console.log("popup")}
-          />
+        {assets.map((coin) => (
+          <RowTable coin={coin} buy={() => console.log("popup")} />
         ))}
       </tbody>
     </table>

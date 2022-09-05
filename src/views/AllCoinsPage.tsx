@@ -7,13 +7,10 @@ import { useTypedSelector } from "../hooks/useTypesSelector";
 export const AllCoinsPage = () => {
   const [paginationCount, setPaginationCount] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-
   useEffect(() => {
     setPaginationCount((currentPage - 1) * 10);
   }, [currentPage]);
-
   const { assets, loading, error } = useTypedSelector((state) => state.assets);
-
   return (
     <>
       <h3>All Coins Info</h3>

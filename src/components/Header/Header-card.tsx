@@ -7,18 +7,19 @@ interface HeaderCardProps {
 }
 
 export const HeaderCard = ({ coin }: HeaderCardProps) => {
+  const { id, name, symbol, priceUsd } = coin;
   return (
     <Link
-      key={coin.id}
+      key={id}
       className={"header-card header-card-coin"}
-      to={`/${coin.id}`}
+      to={`/${id}`}
       style={{ textDecoration: "none" }}
     >
       <div>
-        <h4>{coin.name}</h4>
-        <span>{coin.symbol}</span>
+        <h4>{name}</h4>
+        <span>{symbol}</span>
       </div>
-      <h2>{formatCurrency(coin.priceUsd)}</h2>
+      <h2>{formatCurrency(priceUsd)}</h2>
     </Link>
   );
 };
