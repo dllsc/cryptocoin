@@ -4,9 +4,9 @@ import { Modal } from "../Modal/Modal";
 import { oneCoinInfo } from "../../types/assets";
 import { calculateBalance } from "../../utils/calculateBalance";
 import { getCoinsOnBriefcase } from "../../utils/getCoinsOnBriefcase";
-import { useBriefcaseActions } from "../../hooks/useAssetsActions";
 import { Button } from "../Button/Button";
 import { formatCurrency } from "../../utils/formatCurrency";
+import { useBriefcaseActions } from '../../hooks/useBriefcaseActions';
 
 export const HeaderBriefCase = () => {
   const { coinsPriceAtTimeBuying } = useTypedSelector(
