@@ -3,11 +3,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AllCoinsPage } from "./views/AllCoinsPage";
 import { CoinInfoPage } from "./views/CoinInfoPage";
 import { Header } from "./components/Header/Header";
-import { useActions } from "./hooks/useActions";
+import {
+  useAssetsActions,
+} from "./hooks/useAssetsActions";
 
 function App() {
-  const { fetchAssets } = useActions();
-
+  const { fetchAssets } = useAssetsActions();
   useEffect(() => {
     fetchAssets();
   }, []);

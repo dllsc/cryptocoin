@@ -1,4 +1,3 @@
-import { Button } from "../components/Button/Button";
 import { Table } from "../components/CoinsTable/Table";
 import { Pagination } from "../components/Pagination/Pagination";
 import { useEffect, useState } from "react";
@@ -12,11 +11,7 @@ export const AllCoinsPage = () => {
   }, [currentPage]);
   const { assets, loading, error } = useTypedSelector((state) => state.assets);
   return (
-    <>
-      <h3>All Coins Info</h3>
-      <Button type={"delete"}>delete</Button>
-      <Button type={"primary"}>primary</Button>
-      <Button type={"secondary"}>secondary</Button>
+    <div style={{display:'flex', flexDirection:'column', justifyItems: 'center'}}>
       {loading ? (
         "Loading..."
       ) : error ? (
@@ -24,11 +19,13 @@ export const AllCoinsPage = () => {
       ) : (
         <Table assets={assets.slice(paginationCount, paginationCount + 10)} />
       )}
-      <Pagination
-        countPages={10}
-        currentPage={currentPage}
-        handler={(newPage) => setCurrentPage(newPage)}
-      />
-    </>
+      <div style={{display:'flex', justifyContent: 'center'}}>
+        <Pagination
+            countPages={10}
+            currentPage={currentPage}
+            handler={(newPage) => setCurrentPage(newPage)}
+        />
+      </div>
+    </div>
   );
 };
