@@ -19,7 +19,7 @@ export const HeaderCard = ({ coin }: HeaderCardProps) => {
         <h4>{name}</h4>
         <span>{symbol}</span>
       </div>
-      <h2>{formatCurrency(priceUsd)}</h2>
+      <h2>${formatCurrency(priceUsd)}</h2>
     </Link>
   );
 };

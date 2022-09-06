@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
 import "./Header.scss";
 import { useTypedSelector } from "../../hooks/useTypesSelector";
-import { HeaderCard } from "./Header-card";
+import { HeaderCard } from "./HeaderCard";
+import { HeaderBriefCase } from './HeaderBriefcase';
+import React from 'react';
 
 export function Header() {
   const { assets, loading, error } = useTypedSelector((state) => state.assets);
@@ -16,16 +17,9 @@ export function Header() {
           : top3Coin.map((coin) => <HeaderCard coin={coin} />)}
       </div>
       <div>
-        <Link
-          to={"/my-case"}
-          className={"header-card"}
-          style={{ textDecoration: "none" }}
-        >
-          <div>
-            <span>134,32 USD +2,38 (1,80 %)</span>
-          </div>
-        </Link>
+          <HeaderBriefCase/>
       </div>
+
     </div>
   );
 }
