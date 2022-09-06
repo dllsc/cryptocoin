@@ -1,6 +1,7 @@
 import { Button } from "../Button/Button";
 import { useNavigate } from "react-router-dom";
 import { oneCoinInfo } from "../../types/assets";
+import { formatCurrency } from '../../utils/formatCurrency';
 
 interface RowTableProps {
   coin: oneCoinInfo;
@@ -21,7 +22,7 @@ export const RowTable = ({ buy, coin }: RowTableProps) => {
   const navigate = useNavigate();
   const navigateToCoin = () => navigate(`/${id}`);
   return (
-    <tr>
+    <tr className={'coins_table-rows'}>
       <td className={"table__cell"} onClick={navigateToCoin}>
         {rank}
       </td>
@@ -29,19 +30,19 @@ export const RowTable = ({ buy, coin }: RowTableProps) => {
         {name}
       </td>
       <td className={"table__cell"} onClick={navigateToCoin}>
-        {priceUsd}
+        {formatCurrency(priceUsd)}$
       </td>
       <td className={"table__cell"} onClick={navigateToCoin}>
-        {marketCapUsd}
+        {formatCurrency(marketCapUsd)}
       </td>
       <td className={"table__cell"} onClick={navigateToCoin}>
-        {vwap24Hr}
+        {formatCurrency(vwap24Hr)}
       </td>
       <td className={"table__cell"} onClick={navigateToCoin}>
-        {supply}
+        {formatCurrency(supply)}
       </td>
       <td className={"table__cell"} onClick={navigateToCoin}>
-        {volumeUsd24Hr}
+        {formatCurrency(volumeUsd24Hr)}
       </td>
       <td className={"table__cell"}>
         <Button onClick={() => buy()}>Buy</Button>

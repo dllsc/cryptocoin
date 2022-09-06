@@ -1,13 +1,13 @@
 .coins_table {
   border-spacing: 0;
   border-collapse: collapse;
-  margin: 25px 0;
+  margin: 0 0;
   font-size: 0.9em;
   font-family: sans-serif;
   min-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 
-  &-table_head tr {
+  &-head tr {
     background-color: #5987a6;
     color: #ffffff;
     text-align: left;
@@ -15,10 +15,10 @@
 
   th,
   td {
-    padding: 12px 15px;
+    padding: 7px 10px;
   }
 
-  &-table_rows {
+  &-rows {
     tr {
       border-bottom: 1px solid #dddddd;
     }
